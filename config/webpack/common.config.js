@@ -2,7 +2,7 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
-var babel = require('../../babel.config');
+var babelConfig = require('../../babel.config');
 
 var rootPath = path.join(__dirname, '..', '..');
 /* eslint-enable */
@@ -19,9 +19,7 @@ module.exports = {
         test: /.js?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        query: {
-          presets: babel.presets,
-        },
+        query: babelConfig,
       },
     ],
   },
