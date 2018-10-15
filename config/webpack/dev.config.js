@@ -8,6 +8,9 @@ var rootPath = path.join(__dirname, '..', '..');
 /* eslint-enable */
 
 module.exports = merge(common, {
+  output: {
+    filename: 'dist/scripts.js',
+  },
   devtool: 'inline-source-map',
   devServer: {
     port: 8080,

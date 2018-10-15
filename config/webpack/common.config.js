@@ -16,7 +16,6 @@ module.exports = {
   ],
   output: {
     path: path.join(rootPath, 'public'),
-    filename: 'dist/scripts.js',
   },
   module: {
     rules: [
