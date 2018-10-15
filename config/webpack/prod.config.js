@@ -8,5 +8,4 @@ var rootPath = path.join(__dirname, '..', '..');
 /* eslint-enable */
 
 module.exports = merge(common, {
-  mode: 'production',
 });
