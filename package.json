@@ -1,6 +1,6 @@
 {
   "name": "react-ethereal-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React + Redux + redux-saga lightweight starter kit",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --mode development --config ./config/webpack/dev.config.js --open --inline --hot",
