@@ -1,5 +1,5 @@
 /* eslint-disable */
-var merge = require('webpack-merge');
+var { merge } = require('webpack-merge');
 var TerserPlugin = require('terser-webpack-plugin');
 var path = require('path');
 
@@ -14,11 +14,7 @@ module.exports = merge(common, {
   },
   optimization: {
     minimizer: [
-      new TerserPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true,
-      }),
+      new TerserPlugin(),
     ],
   },
 });

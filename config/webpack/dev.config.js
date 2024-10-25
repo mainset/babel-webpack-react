@@ -1,5 +1,5 @@
 /* eslint-disable */
-var merge = require('webpack-merge');
+var { merge } = require('webpack-merge');
 var path = require('path');
 
 var common = require('./common.config.js');
@@ -14,7 +14,9 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     port: 8080,
-    contentBase: rootPath,
+    static: {
+      directory: rootPath,
+    },
     historyApiFallback: true,
   },
 });

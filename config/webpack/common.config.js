@@ -23,31 +23,27 @@ module.exports = {
     rules: [
       {
         test: /.js?$/,
-        loader: 'babel-loader',
         exclude: /node_modules/,
-        query: babelConfig,
-      }, {
+        use: {
+          loader: 'babel-loader',
+          options: babelConfig,
+        },
+      },
+      {
         test: /\.(svg|png)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[hash].[ext]',
-              outputPath: 'dist/assets/images/',
-            },
-          },
-        ],
-      }, {
+        type: 'asset/resource',
+        generator: {
+          filename: '[name].[hash].[ext]',
+          outputPath: 'dist/assets/images',
+        },
+      },
+      {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[hash].[ext]',
-              outputPath: 'dist/assets/fonts',
-            },
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: '[name].[hash].[ext]',
+          outputPath: 'dist/assets/fonts',
+        },
       },
     ],
   },

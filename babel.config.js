@@ -16,9 +16,7 @@ var babelConfig = {
     ],
     '@babel/preset-react',
   ],
-  plugins: [
-    '@babel/plugin-proposal-class-properties',
-  ],
+  plugins: [],
 };
 
 module.exports = babelConfig;
